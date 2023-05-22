@@ -59,8 +59,9 @@ kotlin {
 
 android {
     namespace = "id.co.buaja.moviebrowser"
-    compileSdk = 33
+    // Change in gradle.properties
+    compileSdk = (findProperty("android.compileSdk") as String).toInt()
     defaultConfig {
-        minSdk = 24
+        minSdk = (findProperty("android.minSdk") as String).toInt()
     }
 }

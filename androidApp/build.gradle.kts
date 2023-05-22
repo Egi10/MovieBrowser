@@ -5,11 +5,12 @@ plugins {
 
 android {
     namespace = "id.co.buaja.moviebrowser.android"
-    compileSdk = 33
+    // Change in gradle.properties
+    compileSdk = (findProperty("android.compileSdk") as String).toInt()
     defaultConfig {
         applicationId = "id.co.buaja.moviebrowser.android"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = (findProperty("android.minSdk") as String).toInt()
+        targetSdk = (findProperty("android.targetSdk") as String).toInt()
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.4"
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
     }
     packagingOptions {
         resources {
@@ -40,10 +41,12 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    implementation("androidx.compose.foundation:foundation:1.4.0")
-    implementation("androidx.compose.material:material:1.4.0")
-    implementation("androidx.activity:activity-compose:1.7.0")
+    // Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.fundation)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.activity.compose)
 }
