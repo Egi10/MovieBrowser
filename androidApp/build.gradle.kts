@@ -48,4 +48,6 @@ dependencies {
     implementation(libs.androidx.compose.fundation)
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.activity.compose)
+    // Common
+    implementation(project(":shared:common"))
 }
