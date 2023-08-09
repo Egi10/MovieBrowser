@@ -1,16 +1,16 @@
 PODS:
-  - shared (1.0)
+  - Belajar (1.0)
 
 DEPENDENCIES:
-  - shared (from `../shared`)
+  - Belajar (from `../shared/domain`)
 
 EXTERNAL SOURCES:
-  shared:
-    :path: "../shared"
+  Belajar:
+    :path: "../shared/domain"
 
 SPEC CHECKSUMS:
-  shared: 2d3b24a8fe27b7d9e65b8d075a9672fbc6a1aa10
+  Belajar: 4e1620db162f4bebf0f0b9fb882b2abf142775cc
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: be78c92ab11bfea806aab95606eec4a777a75e3d
 
 COCOAPODS: 1.11.3

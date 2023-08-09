@@ -16,4 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "MovieBrowser"
 include(":androidApp")
-include(":shared")
+include(":shared:core:network")
+include(":shared:data")
+include(":shared:domain")
+include(":shared:common")

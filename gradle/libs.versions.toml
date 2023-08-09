@@ -1,9 +1,9 @@
 [versions]
-androidGradlePlugin = "7.4.2"
+androidGradlePlugin = "8.0.2"
 androidxActivity = "1.7.0"
 androidxComposeBom = "2023.01.00"
 androidxComposeCompiler = "1.4.4"
-kotlin = "1.8.10"
+kotlin = "1.8.20"
 
 [libraries]
 # Dependencies for Android
